@@ -3,12 +3,20 @@
     <script src="./purify.min.js"></script>
     <script src="./protect.js"></script>
     <script src="./first_party.js"></script>
+    <script src="http://localtest.me:8000/third_party.js"></script>
   </head>
   <body>
-    <b>Open the DevTools to inspect ScriptProtect's output</b></br></br>
-    <div id="container" style="margin-bottom: 20px;">Initial counter</div>
-    <button id="btn" style="width: 200px; height: 50px;">Increase counter</button>
-    <br><div id="foo">Initial content</div>
+    <h2>First party code</h2>
+    <p>
+        <button id="first-benign" style="width: 200px; height: 40px;">Benign image</button>
+        <button id="first-code" style="width: 200px; height: 40px;">Image with event</button>
+    </p>
+    <h2>Third party code</h2>
+    <p>
+        <button id="third-benign" style="width: 200px; height: 40px;">Benign image</button>
+        <button id="third-code" style="width: 200px; height: 40px;">Image with event</button>
+    </p>
+    <p>Hint: Open the DevTools and press some buttons to inspect ScriptProtect's output</p>
+    <div id="foo">=======================</div>
   </body>
-  <script src="http://localtest.me:8000/third_party.js"></script>
 </html>

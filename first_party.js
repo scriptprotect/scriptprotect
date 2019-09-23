@@ -1,9 +1,8 @@
-var counter = 0;
-
 document.addEventListener("DOMContentLoaded", function (event) {
-  document.querySelector("#btn").addEventListener("click", function () {
-    document.querySelector("#container").innerHTML = counter++;
+    document.querySelector("#first-benign").addEventListener("click", function () {
+        document.querySelector("#foo").insertAdjacentHTML("afterend", "<img src='img/first-benign.png' />");
+    })
+    document.querySelector("#first-code").addEventListener("click", function () {
+        document.querySelector("#foo").insertAdjacentHTML("afterend", "<img src='img/first-code.png' onload='alert(\"First party\")' />");
   });
-
-  document.querySelector("#foo").insertAdjacentHTML("afterend", "<i>First party injected text</i><img src='notexisting' onerror='console.log(\"First party: insertAdjacentHTML\")' />");
 });
